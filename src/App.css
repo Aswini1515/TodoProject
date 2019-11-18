@@ -291,8 +291,8 @@ body {
     border-color: rgba(175, 47, 47, 0.1);
 }
 
-.filters li a.selected {
-    border-color: rgba(175, 47, 47, 0.2);
+.filters li a.selected{
+    border-color: rgba(112, 29, 43,0.5);
 }
 .clear-completed,
 html .clear-completed:active {

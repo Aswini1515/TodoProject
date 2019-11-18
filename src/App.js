@@ -38,7 +38,7 @@ class App extends React.Component {
         this.setState({todos: remainder});
 
     }
-        toggleAll = () => {
+        toggleAll () {
               const newTodos = this.state.todos;
               newTodos.forEach(todo =>
               { if (todo.isCompleted === this.state.toggle) {
@@ -52,7 +52,7 @@ class App extends React.Component {
 
 
 
-        toggleTodo = (id) => {
+        toggleTodo (id) {
         this.setState({
          todos : this.state.todos.map (todo => {
              if (todo.id === id ) {
@@ -67,7 +67,7 @@ class App extends React.Component {
              return todo
              } })})}
 
-        updateTodo = (id,newTitle) => {
+        updateTodo (id,newTitle) {
             this.setState({
             todos:this.state.todos.map(todo=>{
                 if(todo.id===id){

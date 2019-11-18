@@ -12,24 +12,21 @@ class TodoForm extends React.Component{
     }
     handleUserInput(e) {
             this.setState({
-
-                newTitle: e.target.value
+                    newTitle: e.target.value
             })
         }
 
     writeTodo(e) {
             var key = e.keyCode || e.which;
-            if (key === 13 && this.state.newTitle !== " ") {
+
+            var tittle = this.state.newTitle
+            if (key === 13 && tittle.replace(/\s*/,'').length!==0) {
                 this.props.addTodo(this.state.newTitle)
                 this.setState({
                     newTitle: '',
                 })
             }
-
-        }
-
-
-
+            }
 render(){
     return(
                     <header className="header">
